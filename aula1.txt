@@ -1,3 +1,8 @@
+Atalhos:
+Option + c = ç
+Command + seta —> movimentação
+Command + seta + shift —> Seleções
+
 Cloud computing --> 
 - armazenamento de dado
 - SAAS
