@@ -53,3 +53,30 @@ Lista de musica com o scrollview
 Asyncimage
 
 */
+
+
+
+                ForEach(Song) { song in
+                    NavigationLink(destination: MusicView(capa: "\(song.capa)", nome: "\(song.name)", artista: "\(song.artist)")){
+                        HStack{
+                            AsyncImage(url: URL(string: song.capa)!) { image in
+                                image
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                            } placeholder: {
+                                Image(systemName: "photo.fill")
+                            }.frame(width: 40, height: 40)
+                                .padding(.top, 12.0)
+                            VStack{
+                                Text( song.name)
+                                    .foregroundStyle(.white)
+                                Text(song.artist)
+                                    .foregroundStyle(.white)
+                                    .font(.caption)
+                            }
+                            Text("                                                       ")
+                            Image(systemName: "ellipsis")
+                                .foregroundStyle(.white)
+                        }
+                    }
+                }
