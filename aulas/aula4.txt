@@ -1,0 +1,46 @@
+ContentView --> criar a TabView
+
+Na TabView as outras telas são chamadas
+
+TabView {
+  ReceivedView()
+    .badge(2)
+    .tabItem{
+      Label("Received", systemImage: "tray.and.arrow.down.fill")
+    }
+  SentView()
+    .tabItem {
+      Label("Sent", systemImage: "tray.and.arrow.up.fill")
+    }
+  AccountView()
+    .badge("!")
+    .tabItem {
+      Label("Account", systemImage: person.crop.circle.fill)
+    }
+}
+
+
+// NavigationView --> pilha de visualizaçoes sobre a RootView, por um NavigationLink e remove por meio de um back button ou swipe (gesto) //
+
+NavigationStack{
+  VStack{
+    NavigationLink(destination: SegundaTela()){
+      Text("Ir para a outra tela")
+    }
+  }
+}
+
+Símbolos SF --> Library
+
+developer.apple.com/sf-symbols/ --> criar um símbolo SF
+
+
+Desafio 1:
+
+Trabalhar com TabView
+
+5 chamadas novas
+primeira tela: lista com 50 itens (list() swiftui)
+segunda tela: Texto com caixa de fundo
+terceiro: ScrollView()
+quarta e quinta: mensagem pronta: messageview e profileview

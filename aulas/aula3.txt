@@ -1,0 +1,32 @@
+Controlando ordens e manipulando User Inputs
+  //TextField --> Números/Strings
+
+
+@State private var name: String = "Tim"
+
+//@State é um wrapper para que o programa mude automaticamente e simultaneamente enquanto ele recebe a variável
+//$ Conecta a variável com o elemento da interface, ou seja, conecta o TextField com a var definida
+
+TextField("Enter your name", text: $name)
+Text("Hello, \(name)!")
+
+Até então, o TextField recebe String, para receber número, precisa de uma formatação --> formatter: NumberFormatter())
+
+.keyboardType(.decimalPad)      | Modificadores para o TextField
+.textContentType(.oneTimeCode)  | Modificadores para o TextField
+
+
+Desafio 4:
+
+Calculadora de IMC
+2 textfields --> peso e altura
+botao de calcular --> lógica vem aqui
+
+Mudar a cor do fundo para cada tipo de imc
+
+Cores Hexa:
+Baixo peso: #83c635
+Normal: #c0d90b
+Sobrepeso: #fca500
+Obesidade: #f67600
+
