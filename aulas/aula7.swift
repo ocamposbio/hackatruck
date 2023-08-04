@@ -19,7 +19,9 @@ Observable Object
 Published --> Array pode ser consumido fora da classe
 State Object -> State em objeto, quando um obj for modificado, eu recebo um alerta
 
-
+.onAppear(){
+  viewModel.fetch()
+}
 
 **/
 
