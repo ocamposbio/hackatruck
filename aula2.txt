@@ -1,7 +1,0 @@
-// Introdução ao Swift
-
-Diferença de HStack e VStack
-
-VStack --> Vertical Stack  
-HStack --> Horizontal Stack
-ZStack --> Sobreposição de elementos
