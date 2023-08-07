@@ -9,12 +9,11 @@
 
 import Foundation
 
-
 class ViewModel : ObservableObject {
-    @Published var jogadores : [results] = []
+    @Published var jogadores : [Results] = []
     
     func fetch(){
-        guard let url = URL(string: "https://nba-stats-db.herokuapp.com/api/playerdata/season/2023" ) else {
+        guard let url = URL(string: "https://nba-stats-db.herokuapp.com/api/playerdata/season/2023/?format=json" ) else {
             return
         }
         
@@ -24,10 +23,10 @@ class ViewModel : ObservableObject {
             }
             
             do {
-                let parsed = try JSONDecoder().decode([results].self, from: data)
+                let parsed = try JSONDecoder().decode(ResultAPI.self, from: data)
                 
                 DispatchQueue.main.async {
-                    self?.jogadores = parsed
+                    self?.jogadores = parsed.results
                 }
             }catch{
                 print(error)
