@@ -5,33 +5,34 @@
         "endereçoQuitanda" : "teste2",
         "frutasDisponiveis": [
           {
-            "banana": ["fibras", "potássio", "magnésio", "fósforo", "cálcio", "vitamina A", "vitaminas do complexo B", "vitamina C"],
-            "maça" : ["potássio", "fibras", "fósforo", "magnésio", "cálcio"],
-            "Manga" : ["fibras", "antioxidantes", "cálcio", "zinco", "potássio", "ferro", "magnésio"]
+            "banana": ["fibras, potássio, magnésio, fósforo, cálcio, vitamina A, vitaminas do complexo B, vitamina C"],
+            "maça" : ["potássio, fibras, fósforo, magnésio, cálcio"],
+            "Manga" : ["fibras, antioxidantes, cálcio, zinco, potássio, ferro, magnésio"]
           }
         ]
     },
         {
         "id" : 2,
-        "nomeQuitanda" : "aaaaaaa",
-        "endereçoQuitanda" : "aaaaaaa",
-        "frutasDisponiveis": [
-          {
-            "banana": ["fibras", "potássio", "magnésio", "fósforo", "cálcio", "vitamina A", "vitaminas do complexo B", "vitamina C"],
-            "maça" : ["potássio", "fibras", "fósforo", "magnésio", "cálcio"],
-            "Manga" : ["fibras", "antioxidantes", "cálcio", "zinco", "potássio", "ferro", "magnésio"]
-          }
-        ]
-    },
-        {
-        "id" : 3,
         "nomeQuitanda" : "asdasd",
         "endereçoQuitanda" : "asdasd",
         "frutasDisponiveis": [
           {
-            "banana": ["fibras", "potássio", "magnésio", "fósforo", "cálcio", "vitamina A", "vitaminas do complexo B", "vitamina C"],
-            "maça" : ["potássio", "fibras", "fósforo", "magnésio", "cálcio"],
-            "Manga" : ["fibras", "antioxidantes", "cálcio", "zinco", "potássio", "ferro", "magnésio"]
+            "banana": ["fibras, potássio, magnésio, fósforo, cálcio, vitamina A, vitaminas do complexo B, vitamina C"],
+            "maça" : ["potássio, fibras, fósforo, magnésio, cálcio"],
+            "Manga" : ["fibras, antioxidantes, cálcio, zinco, potássio, ferro, magnésio"]
+          }
+        ]
+    },
+    
+    {
+        "id" : 2,
+        "nomeQuitanda" : "asdasd",
+        "endereçoQuitanda" : "asdasd",
+        "frutasDisponiveis": [
+          {
+            "banana": ["fibras, potássio, magnésio, fósforo, cálcio, vitamina A, vitaminas do complexo B, vitamina C"],
+            "maça" : ["potássio, fibras, fósforo, magnésio, cálcio"],
+            "Manga" : ["fibras, antioxidantes, cálcio, zinco, potássio, ferro, magnésio"]
           }
         ]
     }
