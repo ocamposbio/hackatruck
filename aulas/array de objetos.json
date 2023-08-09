@@ -1,0 +1,14 @@
+[
+    {
+        "id" : 1,
+        "nomeQuitanda" : "teste",
+        "endereçoQuitanda" : "teste2",
+        "frutasDisponiveis": [
+          {
+            "banana": ["fibras", "potássio", "magnésio", "fósforo", "cálcio", "vitamina A", "vitaminas do complexo B", "vitamina C"],
+            "maça" : ["potássio", "fibras", "fósforo", "magnésio", "cálcio"],
+            "Manga" : ["fibras", "antioxidantes", "cálcio", "zinco", "potássio", "ferro", "magnésio"]
+          }
+        ]
+    }
+]
