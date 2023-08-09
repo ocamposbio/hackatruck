@@ -1,0 +1,271 @@
+[
+    {
+        "id": "e5896a7d787447a8",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "fa7e60f938400be7",
+        "type": "http in",
+        "z": "e5896a7d787447a8",
+        "name": "",
+        "url": "/desafiootavioget",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 100,
+        "y": 40,
+        "wires": [
+            [
+                "63541543b04ae7a7"
+            ]
+        ]
+    },
+    {
+        "id": "06f52e8706ee83a9",
+        "type": "http response",
+        "z": "e5896a7d787447a8",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 570,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "eba4fe3e94ef1aa5",
+        "type": "debug",
+        "z": "e5896a7d787447a8",
+        "name": "cloudantplus out",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "a0a3f2b8fe70ac49",
+        "type": "http in",
+        "z": "e5896a7d787447a8",
+        "name": "",
+        "url": "/desafiootaviopost",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 160,
+        "wires": [
+            [
+                "74d146b87f0b8e7a"
+            ]
+        ]
+    },
+    {
+        "id": "a3f674ccd2f250ad",
+        "type": "debug",
+        "z": "e5896a7d787447a8",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "361b4240c3f1bb02",
+        "type": "http response",
+        "z": "e5896a7d787447a8",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 530,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "c0429443c57d8eeb",
+        "type": "http in",
+        "z": "e5896a7d787447a8",
+        "name": "",
+        "url": "/desafiootaviodelete",
+        "method": "delete",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 340,
+        "wires": [
+            [
+                "cff0641aeed52e32"
+            ]
+        ]
+    },
+    {
+        "id": "3384e9bfc2209e8b",
+        "type": "debug",
+        "z": "e5896a7d787447a8",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "56ac99a22d5e734e",
+        "type": "http response",
+        "z": "e5896a7d787447a8",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 530,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "74d146b87f0b8e7a",
+        "type": "split",
+        "z": "e5896a7d787447a8",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 90,
+        "y": 200,
+        "wires": [
+            [
+                "63b243a692adad8a"
+            ]
+        ]
+    },
+    {
+        "id": "3be0e4f80b6aa12c",
+        "type": "join",
+        "z": "e5896a7d787447a8",
+        "name": "",
+        "mode": "auto",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": true,
+        "timeout": "",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 390,
+        "y": 200,
+        "wires": [
+            [
+                "a3f674ccd2f250ad",
+                "361b4240c3f1bb02"
+            ]
+        ]
+    },
+    {
+        "id": "63b243a692adad8a",
+        "type": "cloudantplus out",
+        "z": "e5896a7d787447a8",
+        "name": "",
+        "cloudant": "def396d7edc6c5bf",
+        "database": "desafiootavio",
+        "service": "_ext_",
+        "payonly": true,
+        "operation": "insert",
+        "x": 240,
+        "y": 200,
+        "wires": [
+            [
+                "3be0e4f80b6aa12c"
+            ]
+        ]
+    },
+    {
+        "id": "cff0641aeed52e32",
+        "type": "cloudantplus out",
+        "z": "e5896a7d787447a8",
+        "name": "",
+        "cloudant": "def396d7edc6c5bf",
+        "database": "desafiootavio",
+        "service": "_ext_",
+        "payonly": true,
+        "operation": "delete",
+        "x": 340,
+        "y": 340,
+        "wires": [
+            [
+                "3384e9bfc2209e8b",
+                "56ac99a22d5e734e"
+            ]
+        ]
+    },
+    {
+        "id": "0f596e5a9bf696a1",
+        "type": "json",
+        "z": "e5896a7d787447a8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 450,
+        "y": 60,
+        "wires": [
+            [
+                "06f52e8706ee83a9"
+            ]
+        ]
+    },
+    {
+        "id": "63541543b04ae7a7",
+        "type": "cloudantplus in",
+        "z": "e5896a7d787447a8",
+        "name": "",
+        "cloudant": "def396d7edc6c5bf",
+        "database": "desafiootavio",
+        "service": "_ext_",
+        "search": "_all_",
+        "design": "",
+        "index": "",
+        "x": 300,
+        "y": 40,
+        "wires": [
+            [
+                "eba4fe3e94ef1aa5",
+                "0f596e5a9bf696a1"
+            ]
+        ]
+    },
+    {
+        "id": "def396d7edc6c5bf",
+        "type": "cloudantplus",
+        "host": "https://apikey-v2-2lmhq1gzwjoabomcns4s0xk9ql6r2vtp8kl6mh863fts:c49394da412cd8baa3bd5c3b025f248f@8472bb0f-4f34-4675-bd25-3cf7a52343d1-bluemix.cloudantnosqldb.appdomain.cloud",
+        "name": "",
+        "useapikey": true
+    }
+]
