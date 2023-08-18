@@ -1,0 +1,129 @@
+[
+    {
+        "id": "9aaa8bd8ce182a46",
+        "type": "tab",
+        "label": "sensor umidade Otavio",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "6a192f65b4d4998b",
+        "type": "http in",
+        "z": "9aaa8bd8ce182a46",
+        "name": "sensor umidade",
+        "url": "/otavioumidade",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 80,
+        "y": 160,
+        "wires": [
+            [
+                "ebeccce995cf608a",
+                "5b5fdf2561805f20",
+                "c59393bf6eb79536"
+            ]
+        ]
+    },
+    {
+        "id": "ebeccce995cf608a",
+        "type": "ui_gauge",
+        "z": "9aaa8bd8ce182a46",
+        "name": "",
+        "group": "ec0790b09b809a49",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "wave",
+        "title": "gauge",
+        "label": "%",
+        "format": "{{msg.payload.umidade}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 270,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "5b5fdf2561805f20",
+        "type": "cloudantplus out",
+        "z": "9aaa8bd8ce182a46",
+        "name": "",
+        "cloudant": "def396d7edc6c5bf",
+        "database": "otavioumidade",
+        "service": "_ext_",
+        "payonly": true,
+        "operation": "insert",
+        "x": 300,
+        "y": 160,
+        "wires": [
+            [
+                "edf964145f3404f8"
+            ]
+        ]
+    },
+    {
+        "id": "c59393bf6eb79536",
+        "type": "debug",
+        "z": "9aaa8bd8ce182a46",
+        "name": "debug 25",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 280,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "edf964145f3404f8",
+        "type": "http response",
+        "z": "9aaa8bd8ce182a46",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 470,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "ec0790b09b809a49",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "b67c0e5e1cc06d61",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "def396d7edc6c5bf",
+        "type": "cloudantplus",
+        "host": "https://apikey-v2-2lmhq1gzwjoabomcns4s0xk9ql6r2vtp8kl6mh863fts:c49394da412cd8baa3bd5c3b025f248f@8472bb0f-4f34-4675-bd25-3cf7a52343d1-bluemix.cloudantnosqldb.appdomain.cloud",
+        "name": "api otavio",
+        "useapikey": true
+    },
+    {
+        "id": "b67c0e5e1cc06d61",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
